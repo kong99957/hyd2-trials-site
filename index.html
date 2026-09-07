@@ -28,8 +28,8 @@
         <header class="bg-slate-900 text-white p-4 sticky top-0 z-50 shadow-md flex justify-between items-center border-b border-slate-800">
             <div class="flex items-center space-x-3">
                 <div class="w-11 h-11 bg-white p-0.5 rounded-xl shadow-inner flex items-center justify-center shrink-0 overflow-hidden">
-                    <!-- 使用你的本地 Logo 图片 -->
-                    <img src="logo.jpg" alt="哈医大二院徽章" class="w-full h-full object-contain rounded-lg">
+                    <!-- 使用直嵌代码的哈医大二院高清徽章 Logo -->
+                    <img src="logo.jpg" alt="哈医大二院徽章" class="w-full h-full object-contain rounded-lg" onerror="this.src='https://img.alicdn.com/imgextra/i4/O1CN01fW9W6X1a7217596000000000-2-pip.png'">
                 </div>
                 <div>
                     <h1 class="text-base md:text-lg font-bold tracking-wide leading-none mb-1">哈医大二院肿瘤内科</h1>
@@ -251,13 +251,11 @@
                                         </span>
                                     </div>
 
-                                    <!-- 项目简介：纯文字展示，若不填则隐藏 -->
                                     <div v-if="trial.description && trial.description.trim()" class="text-xs text-slate-700 bg-slate-50/90 p-3 rounded-xl border border-slate-200/80 mb-3.5 flex items-start gap-1.5 shadow-2xs">
                                         <span class="font-bold text-blue-600 shrink-0 flex items-center gap-1 pt-0.5"><i class="fa-solid fa-receipt text-blue-500"></i> 项目简介：</span>
                                         <span class="font-medium text-slate-800 leading-relaxed">{{ trial.description.trim() }}</span>
                                     </div>
 
-                                    <!-- 核心特征标签 -->
                                     <div class="flex flex-wrap gap-1 mb-1">
                                         <span v-for="tag in trial.tags" :key="tag" class="bg-blue-50 text-blue-700 border border-blue-100 text-[10px] px-2 py-0.5 rounded-md font-bold">{{ tag }}</span>
                                     </div>
@@ -514,8 +512,8 @@
     <script>
         const { createApp, ref, computed, watch, onMounted } = Vue;
 
-        const SUPABASE_URL = "https://tqdmcdcvknqygwkpemll.supabase.co";
-        const SUPABASE_KEY = "sb_publishable_td6jG96VyiWhzilHVzjGng_9fQIc6vs";
+        const SUPABASE_URL = "https://gganargltgcainxqolge.supabase.co";
+        const SUPABASE_KEY = "sb_publishable_4jjIX6KZJKeSKB9wkA5Uxg_7smKZFHR";
         
         let globalSupabase = null;
         try {
